@@ -45,7 +45,7 @@
 	"Empleado.h"
 	"string.h"
 
-1557636084 source:c:\users\diego\desktop\abm\main.c
+1557636255 source:c:\users\diego\desktop\abm\main.c
 	<stdlib.h>
 	"Estructuras.h"
 	"funciones.h"
@@ -72,7 +72,7 @@
 1557631703 c:\users\diego\desktop\abm\estructuras.h
 	<stdio.h>
 
-1557636091 source:c:\users\diego\desktop\abm\estructuras.c
+1557636717 source:c:\users\diego\desktop\abm\estructuras.c
 	"string.h"
 	"Estructuras.h"
 	"funciones.h"

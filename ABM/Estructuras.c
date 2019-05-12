@@ -135,12 +135,14 @@ void cargarPelicula(ePelicula lista[],int tp,eGeneros generos[], int tg, eActore
         printf("\nIngrese titulo de la pelicula: ");
         fflush(stdin);
         gets(lista[i].nombre);
-
         printf("\n");
+
+        printf("\nGeneros disponibles:\n\n");
         mostrarGeneros(generos,tg);
-        lista[i].idGenero=pedirEntero("genero",1,5);
         printf("\n");
+        lista[i].idGenero=pedirEntero("genero",1,5);
 
+        printf("\nActores disponibles:\n\n");
         mostrarActores(actores,ta);
         printf("\n");
         lista[i].idActor=pedirEntero("actor",1,10);
@@ -289,7 +291,9 @@ void modificarPelicula(ePelicula lista[], int tp, eGeneros generos[],int tg,eAct
             }
             else
             {
+                printf("\nActores disponibles:\n\n");
                 mostrarActores(actores,ta);
+                printf("\n");
                 lista[i].idActor=pedirEntero("nuevo actor",1,10);
                 system("cls");
                 printf("\n\n\n\n::::::::::::::::::::::::::::");

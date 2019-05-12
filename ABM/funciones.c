@@ -6,7 +6,7 @@
 
 void pedirCadena(char mensaje[], char cadena[],int tam)
 {
-    printf("Ingrese %s", mensaje);
+    printf("Ingrese %s:", mensaje);
     fflush(stdin);
     scanf("%[^\n]", cadena);
     validarTamCadena(mensaje,cadena,tam);
@@ -16,7 +16,7 @@ void validarTamCadena(char mensajeError[], char cadena[], int tam)
 {
     while(strlen(cadena)>tam)
     {
-        printf("Reingrese %s", mensajeError);
+        printf("Reingrese %s:", mensajeError);
         fflush(stdin);
         scanf("%[^\n]", cadena);
     }

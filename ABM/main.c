@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-#include "Empleado.h"
+#include "Estructuras.h"
 #include "funciones.h"
 #include "string.h"
 #define TAMPELICULAS 1000
@@ -26,10 +26,9 @@ int main()
     hardcodearActores(actores,TAMACTORES);
 
 
-
     do
     {
-        opcion = menuDeOpciones("  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Baja\n3.Modificar\n4.Listar actores/peliculas\n6.Informar genero con mas peliculas.\n10.Salir\n\nElija una opcion:");
+        opcion = menuDeOpciones("  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n6.Informar genero con mas peliculas.\n10.Salir\n\nElija una opcion:");
         switch(opcion)
         {
         case 1:
@@ -37,11 +36,11 @@ int main()
             break;
 
         case 2:
-            borrarPelicula(lista, TAMPELICULAS,generos, TAMGENEROS,actores,TAMACTORES);
+            modificarPelicula(lista, TAMPELICULAS, generos, TAMGENEROS,actores,TAMACTORES);
             break;
 
         case 3:
-            modificarPelicula(lista, TAMPELICULAS, generos, TAMGENEROS,actores,TAMACTORES);
+            borrarPelicula(lista, TAMPELICULAS,generos, TAMGENEROS,actores,TAMACTORES);
             break;
         case 4:
             printf("\n1.Mostrar peliculas ordenadas por fecha.\n2.Mostrar actores ordenados por pais de origen.\n\nSu opcion:");

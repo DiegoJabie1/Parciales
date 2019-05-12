@@ -29,7 +29,7 @@ int main()
 
     do
     {
-        opcion = menuDeOpciones("  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n6.Informar genero con mas peliculas.\n10.Salir\n\nElija una opcion:");
+        opcion = menuDeOpciones("  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n10.Salir\n\nElija una opcion:");
         switch(opcion)
         {
         case 1:
@@ -67,7 +67,7 @@ int main()
             break;
 
         case 5:
-
+            buscarActorConMasPeliculas(actores,TAMACTORES,lista,TAMPELICULAS);
             break;
 
         case 6:

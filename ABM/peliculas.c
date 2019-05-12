@@ -318,7 +318,7 @@ void borrarPelicula(ePelicula lista[], int tp, eGeneros generos[], int tg,eActor
     system("cls");
 }
 
-void buscarGeneroConMasPeliculas(eGeneros generos[], int tg, ePelicula peliculas[],int te)
+void buscarGeneroConMasPeliculas(eGeneros generos[], int tg, ePelicula peliculas[],int tp)
 {
     eAuxiliar aux[tg];
 
@@ -336,7 +336,7 @@ void buscarGeneroConMasPeliculas(eGeneros generos[], int tg, ePelicula peliculas
 
     for(i=0; i<tg; i++)
     {
-        for(j=0; j<te; j++)
+        for(j=0; j<tp; j++)
         {
             if(aux[i].idGenero==peliculas[j].idGenero)
             {
@@ -358,6 +358,53 @@ void buscarGeneroConMasPeliculas(eGeneros generos[], int tg, ePelicula peliculas
         if(aux[i].contador==maximo)
         {
             printf("\n\nCon %d peliculas el genero que mas peliculas tiene es: %s.\n\n\n",aux[i].contador,aux[i].descripcion);
+        }
+    }
+
+    system("pause");
+    system("cls");
+}
+
+void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[],int tp)
+{
+    eAuxiliar aux[ta];
+
+    int i;
+    int j;
+    int flag=0;
+    int maximo=0;
+
+    for(i=0; i<ta; i++)
+    {
+        aux[i].idActor=actores[i].idActor;
+        strcpy(aux[i].descripcion,actores[i].nombreActor);
+        aux[i].contador=0;
+    }
+
+    for(i=0; i<ta; i++)
+    {
+        for(j=0; j<tp; j++)
+        {
+            if(aux[i].idActor==peliculas[j].idActor)
+            {
+                aux[i].contador++;
+            }
+        }
+    }
+    for(i=0; i<ta; i++)
+    {
+        if(flag==0||aux[i].contador>maximo)
+        {
+            maximo=aux[i].contador;
+            flag=1;
+        }
+    }
+
+    for(i=0; i<ta; i++)
+    {
+        if(aux[i].contador==maximo)
+        {
+            printf("\n\nCon %d peliculas el actor que mas peliculas tiene es: %s.\n\n\n",aux[i].contador,aux[i].descripcion);
         }
     }
 

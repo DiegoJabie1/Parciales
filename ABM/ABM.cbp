@@ -31,17 +31,25 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Estructuras.c">
+		<Unit filename="actores.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Estructuras.h" />
+		<Unit filename="actores.h" />
 		<Unit filename="funciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="funciones.h" />
+		<Unit filename="generos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="generos.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="peliculas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="peliculas.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

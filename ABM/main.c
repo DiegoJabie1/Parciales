@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-#include "Estructuras.h"
+#include "peliculas.h"
 #include "funciones.h"
 #include "string.h"
 #define TAMPELICULAS 1000
@@ -21,6 +21,7 @@ int main()
     inicializarPeliculas(lista,TAMPELICULAS);
 
     hardcodearDatosPeliculas(lista,21);
+
     hardcodearGeneros(generos,TAMGENEROS);
 
     hardcodearActores(actores,TAMACTORES);

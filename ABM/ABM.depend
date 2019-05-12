@@ -77,3 +77,45 @@
 	"Estructuras.h"
 	"funciones.h"
 
+1557644091 source:c:\users\diego\desktop\parciales-master\abm\estructuras.c
+	"string.h"
+	"funciones.h"
+	"Estructuras.h"
+
+1557644390 c:\users\diego\desktop\parciales-master\abm\estructuras.h
+	<stdio.h>
+	"actores.h"
+	"generos.h"
+
+1557638091 c:\users\diego\desktop\parciales-master\abm\funciones.h
+	<string.h>
+
+1557638091 source:c:\users\diego\desktop\parciales-master\abm\funciones.c
+	"funciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1557643751 source:c:\users\diego\desktop\parciales-master\abm\main.c
+	<stdlib.h>
+	"Estructuras.h"
+	"funciones.h"
+	"string.h"
+
+1557644091 c:\users\diego\desktop\parciales-master\abm\actores.h
+	<stdio.h>
+
+1557644121 source:c:\users\diego\desktop\parciales-master\abm\actores.c
+	"actores.h"
+	"string.h"
+	"funciones.h"
+
+1557644390 c:\users\diego\desktop\parciales-master\abm\generos.h
+	<stdio.h>
+
+1557644390 source:c:\users\diego\desktop\parciales-master\abm\generos.c
+	"funciones.h"
+	"generos.h"
+	"string.h"
+

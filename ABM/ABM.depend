@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1555945588 source:c:\users\alumno\desktop\abm\main.c
+	<stdlib.h>
+	"Empleado.h"
+
+1555945588 c:\users\alumno\desktop\abm\empleado.h
+	<stdio.h>
+
+1555945237 source:c:\users\alumno\desktop\abm\empleado.c
+	"Empleado.h"
+
+1556543053 source:c:\users\alumno\desktop\clase-4-master\clase 10\main.c
+	<stdlib.h>
+	"Empleado.h"
+	"string.h"
+
+1556543283 c:\users\alumno\desktop\clase-4-master\clase 10\empleado.h
+	<stdio.h>
+
+1556547751 source:c:\users\alumno\desktop\clase-4-master\clase 10\empleado.c
+	"string.h"
+	"Empleado.h"
+
+1557223577 source:c:\users\diego\desktop\clase4xd\clase 10\main.c
+	<stdlib.h>
+	"Empleado.h"
+	"string.h"
+
+1557223433 c:\users\diego\desktop\clase4xd\clase 10\empleado.h
+	<stdio.h>
+
+1557223499 source:c:\users\diego\desktop\clase4xd\clase 10\empleado.c
+	"string.h"
+	"Empleado.h"
+
+1557223499 source:c:\users\diego\desktop\clase4xd\abm\empleado.c
+	"string.h"
+	"Empleado.h"
+
+1557506050 c:\users\diego\desktop\clase4xd\abm\empleado.h
+	<stdio.h>
+
+1557223577 source:c:\users\diego\desktop\clase4xd\abm\main.c
+	<stdlib.h>
+	"Empleado.h"
+	"string.h"
+
+1557630308 source:c:\users\diego\desktop\abm\main.c
+	<stdlib.h>
+	"Empleado.h"
+	"funciones.h"
+	"string.h"
+
+1557631703 c:\users\diego\desktop\abm\empleado.h
+	<stdio.h>
+
+1557631334 source:c:\users\diego\desktop\abm\empleado.c
+	"string.h"
+	"Empleado.h"
+	"funciones.h"
+
+1557631648 source:c:\users\diego\desktop\abm\funciones.c
+	"funciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1557631649 c:\users\diego\desktop\abm\funciones.h
+	<string.h>
+

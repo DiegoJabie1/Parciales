@@ -97,7 +97,7 @@
 	<stdlib.h>
 	<ctype.h>
 
-1557685386 source:c:\users\diego\desktop\parciales-master\abm\main.c
+1557689835 source:c:\users\diego\desktop\parciales-master\abm\main.c
 	<stdlib.h>
 	"peliculas.h"
 	"funciones.h"
@@ -111,20 +111,20 @@
 	"string.h"
 	"funciones.h"
 
-1557644858 c:\users\diego\desktop\parciales-master\abm\generos.h
+1557692886 c:\users\diego\desktop\parciales-master\abm\generos.h
 	<stdio.h>
 
-1557644858 source:c:\users\diego\desktop\parciales-master\abm\generos.c
+1557693055 source:c:\users\diego\desktop\parciales-master\abm\generos.c
 	"funciones.h"
 	"generos.h"
 	"string.h"
 
-1557685614 c:\users\diego\desktop\parciales-master\abm\peliculas.h
+1557689186 c:\users\diego\desktop\parciales-master\abm\peliculas.h
 	<stdio.h>
 	"actores.h"
 	"generos.h"
 
-1557685307 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
+1557693055 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
 	"string.h"
 	"funciones.h"
 	"peliculas.h"

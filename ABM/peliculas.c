@@ -10,7 +10,7 @@ int menuDeOpciones(char mensaje[])
     while (opcion>10)
     {
     system("cls");
-    printf("Opcion invalida, intente nuevamente!!%s",mensaje);
+    printf("OPCION INVALIDA, INTENTE NUEVAMENTE!!\n%s",mensaje);
     scanf("%d",&opcion);
     }
 
@@ -412,6 +412,128 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
     system("cls");
 }
 
+void buscarAnioConMasPeliculas(ePelicula peliculas[],int tp)
+{
+
+    eAuxiliar aux[tp];
+
+    int i;
+    int j;
+    int contadorAniosMayorCantidadPeliculas=0;
+    int auxAnio=0;
+    int flag=0;
+    int maximo=0;
+
+    for(i=0; i<tp; i++)
+    {
+        if(peliculas[i].estado==OCUPADO)
+        {
+            aux[i].anio=peliculas[i].anio;
+            aux[i].contador=0;
+        }
+    }
+
+    for(i=0; i<tp; i++)
+    {
+        for(j=0; j<tp; j++)
+        {
+            if(aux[i].anio==peliculas[j].anio&&peliculas[j].estado==OCUPADO&&peliculas[i].estado==OCUPADO)
+            {
+                aux[i].contador++;
+            }
+        }
+    }
+
+    for(i=0; i<tp; i++)
+    {
+        if((flag==0||aux[i].contador>maximo)&&(peliculas[i].estado==OCUPADO))
+        {
+            maximo=aux[i].contador;
+            flag=1;
+        }
+    }
+
+    for(i=0; i<tp; i++)
+    {
+        if(aux[i].contador==maximo&&peliculas[i].estado==OCUPADO)
+        {
+            if(contadorAniosMayorCantidadPeliculas==1&&!(auxAnio==aux[i].anio))
+            {
+                printf("\n\nY con %d peliculas el siguiente anio que mas peliculas tiene es: %d.\n\n\n",aux[i].contador,aux[i].anio);
+
+                break;
+            }
+            else if(contadorAniosMayorCantidadPeliculas==0)
+            {
+                printf("\n\nCon %d peliculas el anio que mas peliculas tiene es: %d.\n\n",aux[i].contador,aux[i].anio);
+
+                auxAnio=aux[i].anio;
+
+
+            }
+        contadorAniosMayorCantidadPeliculas++;
+
+        }
+    }
+
+    system("pause");
+    system("cls");
+}
+
+void buscarMesConMasPeliculas(ePelicula peliculas[],int tp)
+{
+    eAuxiliar aux[tp];
+
+    int i;
+    int j;
+    int flag=0;
+    int maximo=0;
+
+
+    for(i=0; i<tp; i++)
+        {
+        if(peliculas[i].estado==OCUPADO)
+            {
+                aux[i].mes=peliculas[i].mes;
+                aux[i].contador=0;
+            }
+        }
+
+    for(i=0; i<tp; i++)
+    {
+        for(j=0; j<tp; j++)
+        {
+            if(aux[i].mes==peliculas[j].mes&&peliculas[i].estado==OCUPADO&&peliculas[j].estado==OCUPADO)
+            {
+                aux[i].contador++;
+            }
+        }
+    }
+
+    for(i=0; i<tp; i++)
+    {
+        if((flag==0||aux[i].contador>maximo)&&(peliculas[i].estado==OCUPADO))
+        {
+            maximo=aux[i].contador;
+            flag=1;
+        }
+    }
+
+    for(i=0; i<tp; i++)
+    {
+        if(aux[i].contador==maximo&&peliculas[i].estado==OCUPADO)
+        {
+            printf("\n\nCon %d peliculas, el que mas peliculas tiene es el mes %d.\n\n\n",aux[i].contador,aux[i].mes);
+
+            break;
+        }
+    }
+
+
+    system("pause");
+    system("cls");
+}
+
 int idAutoIncremental(ePelicula lista[], int tp)
 {
     int retorno = 0;
@@ -443,7 +565,7 @@ void ordenarPeliculasPorFecha(ePelicula peliculas[],int tp)
     {
         for(j=i+1;j<tp;j++)
         {
-            if(peliculas[i].anio>peliculas[j].anio)
+            if(peliculas[i].anio<peliculas[j].anio)
             {
                 auxiliar=peliculas[i];
                 peliculas[i]=peliculas[j];

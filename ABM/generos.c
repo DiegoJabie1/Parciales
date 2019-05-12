@@ -6,7 +6,7 @@ void hardcodearGeneros(eGeneros generos[],int tp)
 {
     int i;
     int idgeneros[]={1,2,3,4,5};
-    char descripciongeneros[][20]={"Accion", "Comedia","Drama", "Romance", "Terror"};
+    char descripciongeneros[][50]={"Accion", "Comedia","Drama", "Romance", "Terror"};
 
     for(i=0; i<tp; i++)
     {

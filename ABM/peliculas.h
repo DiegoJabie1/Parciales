@@ -24,6 +24,8 @@ typedef struct
 int idGenero;
 int idActor;
 int contador;
+int anio;
+int mes;
 char descripcion[50];
 
 }eAuxiliar;
@@ -53,6 +55,10 @@ void borrarPelicula(ePelicula[], int, eGeneros[], int, eActores[], int);
 void buscarGeneroConMasPeliculas(eGeneros[], int, ePelicula[],int);
 
 void buscarActorConMasPeliculas(eActores[],int, ePelicula[],int);
+
+void buscarAnioConMasPeliculas(ePelicula[],int);
+
+void buscarMesConMasPeliculas(ePelicula[],int);
 
 void ordenarPeliculasPorFecha(ePelicula[],int);
 

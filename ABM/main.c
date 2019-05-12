@@ -29,7 +29,7 @@ int main()
 
     do
     {
-        opcion = menuDeOpciones("  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n10.Salir\n\nElija una opcion:");
+        opcion = menuDeOpciones("\n  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n7.Informar anio con mas peliculas\n8.Informar mes con mas peliculas\n10.Salir\n\nElija una opcion:");
         switch(opcion)
         {
         case 1:
@@ -43,9 +43,12 @@ int main()
         case 3:
             borrarPelicula(lista, TAMPELICULAS,generos, TAMGENEROS,actores,TAMACTORES);
             break;
+
         case 4:
             printf("\n1.Mostrar peliculas ordenadas por fecha.\n2.Mostrar actores ordenados por pais de origen.\n\nSu opcion:");
+
             scanf("%d",&opcionMostrar);
+
             while(opcionMostrar>2||opcionMostrar<0)
             {
                 printf("\nOpcion para mostrar invalida. Intente nuevamente: ");
@@ -74,6 +77,13 @@ int main()
             buscarGeneroConMasPeliculas(generos,TAMGENEROS,lista,TAMPELICULAS);
             break;
 
+        case 7:
+            buscarAnioConMasPeliculas(lista,TAMPELICULAS);
+            break;
+
+        case 8:
+            buscarMesConMasPeliculas(lista,TAMPELICULAS);
+            break;
         }
     }
     while(opcion!=10);

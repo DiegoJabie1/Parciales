@@ -3,7 +3,7 @@
 typedef struct
 {
     int idGenero;
-    char descripcion[20];
+    char descripcion[50];
 
 }eGeneros;
 

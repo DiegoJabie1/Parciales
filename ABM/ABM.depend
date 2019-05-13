@@ -106,7 +106,7 @@
 1557700934 c:\users\diego\desktop\parciales-master\abm\actores.h
 	<stdio.h>
 
-1557700934 source:c:\users\diego\desktop\parciales-master\abm\actores.c
+1557715617 source:c:\users\diego\desktop\parciales-master\abm\actores.c
 	"actores.h"
 	"string.h"
 	"funciones.h"
@@ -124,7 +124,7 @@
 	"actores.h"
 	"generos.h"
 
-1557709911 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
+1557716211 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
 	"string.h"
 	"funciones.h"
 	"peliculas.h"

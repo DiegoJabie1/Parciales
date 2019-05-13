@@ -391,7 +391,6 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
             }
         }
     }
-
     for(i=0; i<ta; i++)
     {
         if(flag==0||aux[i].contador>maximo)
@@ -405,13 +404,14 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
     {
         if(aux[i].contador==maximo)
         {
-            printf("\n\nEl actor que mas peliculas tiene es: %s.\n\n",aux[i].descripcion);
+            printf("\n\nCon %d peliculas el actor que mas peliculas tiene es: %s.\n\n\n",aux[i].contador,aux[i].descripcion);
         }
     }
-    printf("\n");
+
     system("pause");
     system("cls");
 }
+
 
 void buscarAnioConMasPeliculas(ePelicula peliculas[],int tp)
 {
@@ -590,7 +590,7 @@ void mostrarCantPeliculasPorActor(ePelicula peliculas[], int tp, eActores actore
 
         for(int j=0; j < tp; j++)
         {
-            if(actores[i].idActor == peliculas[j].idActor && (peliculas[j].estado==OCUPADO) == 1)
+            if(actores[i].idActor == peliculas[j].idActor&&(peliculas[j].estado==OCUPADO) == 1)
             {
                 contador++;
             }

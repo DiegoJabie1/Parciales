@@ -6,8 +6,8 @@ void hardcodearActores(eActores actores[],int ta)
 {
     int i;
     int idActores[]={1,2,3,4,5,6,7,8,9,10};
-    char nacionalidadActores[][50]={"Argentina", "EEUU","Canada", "EEUU","Argentina", "EEUU","Canada","Argentina","EEUU","Canada"};
-    char nombreActores[][50]={"Scarlett Johansson", "Robert Downey Jr", "Mark Ruffalo","Chris Evans","Chris Hemsworth","Samuel Jackson","Gwyneth Paltrow","Paul Rudd","Bradley Cooper","Josh Brolin"};
+    char nacionalidadActores[][50]={"Argentina", "EEUU","Canada","EEUU","Argentina","EEUU","Canada","Argentina","EEUU","Canada"};
+    char nombreActores[][50]={"Scarlett Johansson","Robert Downey Jr","Mark Ruffalo","Chris Evans","Chris Hemsworth","Samuel Jackson","Gwyneth Paltrow","Paul Rudd","Bradley Cooper","Josh Brolin"};
 
     for(i=0; i<ta; i++)
     {

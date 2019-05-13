@@ -13,6 +13,7 @@ int main()
 {
     int opcion;
     int opcionMostrar;
+    int opcionInformes;
 
     ePelicula lista[TAMPELICULAS];
     eActores actores[TAMACTORES];
@@ -29,7 +30,7 @@ int main()
 
     do
     {
-        opcion = menuDeOpciones("\n  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n7.Informar anio con mas peliculas\n8.Informar mes con mas peliculas\n9.Mostrar cantidad de peliculas por actor\n10.Mostrar cantidad de peliculas por genero\n11.Mostrar actores con peliculas\n12.Mostrar generos con peliculas\n15.Salir\n\nElija una opcion:");
+        opcion = menuDeOpciones("\n  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informes\n6.Salir\n\nElija una opcion:");
         switch(opcion)
         {
         case 1:
@@ -70,36 +71,32 @@ int main()
             break;
 
         case 5:
-            buscarActorConMasPeliculas(actores,TAMACTORES,lista,TAMPELICULAS);
-            break;
+            printf("\n1.Mostrar todas las peliculas con genero y actor\n2.Mostrar peliculas cuyo actor sea de EEUU\n3.Mostrar cada genero con sus peliculas\n4.Mostrar cantidad de peliculas por genero\n5.El/los generos con menos peliculas\n\n");
+            opcionInformes=pedirEntero("opcion que desea",1,5);
+            if(opcionInformes==1)
+            {
+                mostrarListaPeliculas(lista,TAMPELICULAS,generos,TAMGENEROS,actores,TAMACTORES);
+            }
+            else if(opcionInformes==2)
+            {
+                mostrarPeliculasActorEEUU(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
+            }
+            else if(opcionInformes==3)
+            {
+                mostrarGenerosConPeliculas(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
+            }
+            else if(opcionInformes==4)
+            {
+                mostrarCantPeliculasPorGenero(lista,TAMPELICULAS,generos,TAMGENEROS);
+            }
+            else
+            {
+                buscarGeneroConMenosPeliculas(generos,TAMGENEROS,lista,TAMPELICULAS);
+            }
 
-        case 6:
-            buscarGeneroConMasPeliculas(generos,TAMGENEROS,lista,TAMPELICULAS);
-            break;
-
-        case 7:
-            buscarAnioConMasPeliculas(lista,TAMPELICULAS);
-            break;
-
-        case 8:
-            buscarMesConMasPeliculas(lista,TAMPELICULAS);
-            break;
-
-        case 9:
-            mostrarCantPeliculasPorActor(lista,TAMPELICULAS,actores,TAMACTORES);
-            break;
-
-        case 10:
-            mostrarCantPeliculasPorGenero(lista,TAMPELICULAS,generos,TAMGENEROS);
-            break;
-        case 11:
-            mostrarActoresConPeliculas(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
-            break;
-        case 12:
-            mostrarGenerosConPeliculas(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
             break;
         }
     }
-    while(opcion!=15);
+    while(opcion!=6);
     return 0;
 }

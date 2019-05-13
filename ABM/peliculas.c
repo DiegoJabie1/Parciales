@@ -7,7 +7,7 @@ int menuDeOpciones(char mensaje[])
     int opcion;
     printf("%s", mensaje);
     scanf("%d", &opcion);
-    while (opcion>15)
+    while (opcion>6)
     {
     system("cls");
     printf("OPCION INVALIDA, INTENTE NUEVAMENTE!!\n%s",mensaje);
@@ -142,7 +142,7 @@ void mostrarPelicula(ePelicula unaPelicula, eGeneros generos[], int tg, eActores
         }
     }
 
-    for(i=0; i<tg; i++)
+    for(i=0; i<ta; i++)
     {
         if(unaPelicula.idActor==actores[i].idActor)
         {
@@ -155,7 +155,7 @@ void mostrarPelicula(ePelicula unaPelicula, eGeneros generos[], int tg, eActores
 
 
 
-    printf("Fecha: %d/%d/%d-- Titulo: %s -- Genero: %s -- Actor: %s -- Nacionalidad: %s -- Id: %d\n",unaPelicula.anio,unaPelicula.mes,unaPelicula.dia,unaPelicula.nombre,descripcionGenero,nombreActores,nacionalidadActores,unaPelicula.id);
+    printf("%d/%d/%d%25s%15s%23s%15s%10d\n",unaPelicula.anio,unaPelicula.mes,unaPelicula.dia,unaPelicula.nombre,descripcionGenero,nombreActores,nacionalidadActores,unaPelicula.id);
 
 }
 
@@ -164,6 +164,8 @@ void mostrarListaPeliculas(ePelicula lista[], int tp, eGeneros generos[], int tg
     int i;
 
     printf("\n");
+
+    printf("  FECHA \t  TITULO\t\t   GENERO  \t  ACTOR\t\t        NACIONALIDAD   ID\n");
 
     for(i=0; i<tp; i++)
     {
@@ -183,6 +185,8 @@ void mostrarListaPeliculasAux(ePelicula lista[], int tp, eGeneros generos[], int
     int i;
 
     printf("\n");
+
+    printf("  FECHA \t  TITULO\t\t   GENERO  \t  ACTOR\t\t        NACIONALIDAD   ID\n");
 
     for(i=0; i<tp; i++)
     {
@@ -412,7 +416,6 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
     system("cls");
 }
 
-
 void buscarAnioConMasPeliculas(ePelicula peliculas[],int tp)
 {
 
@@ -581,14 +584,17 @@ void ordenarPeliculasPorFecha(ePelicula peliculas[],int tp)
 void mostrarCantPeliculasPorActor(ePelicula peliculas[], int tp, eActores actores[], int ta)
 {
     int contador;
+    int i;
+    int j;
+
     system("cls");
 
-    for(int i=0; i<ta; i++ )
+    for(i=0; i<ta; i++ )
     {
         contador = 0;
         printf("Actor: %s\n", actores[i].nombreActor);
 
-        for(int j=0; j < tp; j++)
+        for(j=0; j < tp; j++)
         {
             if(actores[i].idActor == peliculas[j].idActor&&(peliculas[j].estado==OCUPADO) == 1)
             {
@@ -605,14 +611,17 @@ void mostrarCantPeliculasPorActor(ePelicula peliculas[], int tp, eActores actore
 void mostrarCantPeliculasPorGenero(ePelicula peliculas[], int tp, eGeneros generos[], int tg)
 {
     int contador;
+    int i;
+    int j;
+
     system("cls");
 
-    for(int i=0; i<tg; i++ )
+    for(i=0; i<tg; i++ )
     {
         contador = 0;
         printf("Generos: %s\n", generos[i].descripcion);
 
-        for(int j=0; j < tp; j++)
+        for(j=0; j < tp; j++)
         {
             if(generos[i].idGenero == peliculas[j].idGenero &&(peliculas[j].estado==OCUPADO)== 1)
             {
@@ -630,10 +639,13 @@ void mostrarActoresConPeliculas(ePelicula peliculas[], int tp, eActores actores[
 {
 
     system("cls");
-    for(int i=0; i < ta; i++)
+    int i;
+    int j;
+
+    for(i=0; i < ta; i++)
     {
         printf("Actor: %s\nPeliculas:\n", actores[i].nombreActor);
-        for(int j=0; j < tp; j++)
+        for(j=0; j < tp; j++)
         {
             if( (peliculas[j].idActor == actores[i].idActor) &&(peliculas[j].estado==OCUPADO)== 1)
             {
@@ -651,12 +663,14 @@ void mostrarGenerosConPeliculas(ePelicula peliculas[], int tp, eActores actores[
 {
 
     system("cls");
-    for(int i=0; i < tg; i++)
+    int i;
+    int j;
+    for(i=0; i < tg; i++)
     {
         printf("Genero: %s\nPeliculas:\n", generos[i].descripcion);
-        for(int j=0; j < tp; j++)
+        for(j=0; j < tp; j++)
         {
-            if( (peliculas[j].idGenero == generos[i].idGenero) &&(peliculas[j].estado==OCUPADO)== 1)
+            if((peliculas[j].idGenero == generos[i].idGenero) &&(peliculas[j].estado==OCUPADO)== 1)
             {
                 mostrarPelicula(peliculas[j],generos,tg,actores,ta);
             }
@@ -664,6 +678,75 @@ void mostrarGenerosConPeliculas(ePelicula peliculas[], int tp, eActores actores[
 
         printf("\n\n");
     }
+    system("pause");
+    system("cls");
+}
+
+void mostrarPeliculasActorEEUU(ePelicula peliculas[],int tp,eActores actores[],int ta,eGeneros generos[],int tg)
+{
+
+    system("cls");
+    int i;
+    int j;
+
+    for(i=0; i < ta; i++)
+    {
+        for(j=0; j < tp; j++)
+        {
+            if( (peliculas[j].idActor == actores[i].idActor) &&(peliculas[j].estado==OCUPADO)== 1&&stricmp(actores[i].nacionalidadActor,"eeuu")==0)
+            {
+                mostrarPelicula(peliculas[j],generos,tg,actores,ta);
+            }
+        }
+    }
+    printf("\n\n");
+    system("pause");
+    system("cls");
+}
+
+void buscarGeneroConMenosPeliculas(eGeneros generos[], int tg, ePelicula peliculas[],int tp)
+{
+    eAuxiliar aux[tg];
+
+    int i;
+    int j;
+    int flag=0;
+    int minimo=0;
+
+    for(i=0; i<tg; i++)
+    {
+        aux[i].idGenero=generos[i].idGenero;
+        strcpy(aux[i].descripcion,generos[i].descripcion);
+        aux[i].contador=0;
+    }
+
+    for(i=0; i<tg; i++)
+    {
+        for(j=0; j<tp; j++)
+        {
+            if(aux[i].idGenero==peliculas[j].idGenero)
+            {
+                aux[i].contador++;
+            }
+        }
+    }
+    for(i=0; i<tg; i++)
+    {
+        if(flag==0||aux[i].contador<minimo)
+        {
+            minimo=aux[i].contador;
+            flag=1;
+        }
+    }
+
+    for(i=0; i<tg; i++)
+    {
+        if(aux[i].contador==minimo)
+        {
+            printf("\n\nEl genero que menos peliculas tiene es: %s.\n\n\n",aux[i].descripcion);
+        }
+    }
+
     system("pause");
     system("cls");
 }

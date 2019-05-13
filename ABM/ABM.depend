@@ -129,3 +129,45 @@
 	"funciones.h"
 	"peliculas.h"
 
+1557756122 source:d:\diego daniel rodriguez jabie\parciales-master\abm\actores.c
+	"actores.h"
+	"string.h"
+	"funciones.h"
+
+1557716780 d:\diego daniel rodriguez jabie\parciales-master\abm\actores.h
+	<stdio.h>
+
+1557716780 d:\diego daniel rodriguez jabie\parciales-master\abm\funciones.h
+	<string.h>
+
+1557716780 source:d:\diego daniel rodriguez jabie\parciales-master\abm\funciones.c
+	"funciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1557716780 source:d:\diego daniel rodriguez jabie\parciales-master\abm\generos.c
+	"funciones.h"
+	"generos.h"
+	"string.h"
+
+1557716780 d:\diego daniel rodriguez jabie\parciales-master\abm\generos.h
+	<stdio.h>
+
+1557755989 source:d:\diego daniel rodriguez jabie\parciales-master\abm\main.c
+	<stdlib.h>
+	"peliculas.h"
+	"funciones.h"
+	"string.h"
+
+1557750252 d:\diego daniel rodriguez jabie\parciales-master\abm\peliculas.h
+	<stdio.h>
+	"actores.h"
+	"generos.h"
+
+1557757236 source:d:\diego daniel rodriguez jabie\parciales-master\abm\peliculas.c
+	"string.h"
+	"funciones.h"
+	"peliculas.h"
+

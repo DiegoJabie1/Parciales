@@ -69,3 +69,7 @@ void mostrarCantPeliculasPorGenero(ePelicula[], int, eGeneros[], int);
 void mostrarActoresConPeliculas(ePelicula[], int, eActores[], int,eGeneros[],int);
 
 void mostrarGenerosConPeliculas(ePelicula[], int, eActores[], int,eGeneros[],int);
+
+void mostrarPeliculasActorEEUU(ePelicula[],int,eActores[],int,eGeneros[],int);
+
+void buscarGeneroConMenosPeliculas(eGeneros[], int, ePelicula[],int);

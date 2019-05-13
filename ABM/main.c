@@ -29,7 +29,7 @@ int main()
 
     do
     {
-        opcion = menuDeOpciones("\n  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n7.Informar anio con mas peliculas\n8.Informar mes con mas peliculas\n10.Salir\n\nElija una opcion:");
+        opcion = menuDeOpciones("\n  DIEGOPELICULAS\n\nOpciones disponibles:\n\n1.Alta\n2.Modificar\n3.Dar de baja\n4.Listar actores/peliculas\n5.Informar actor con mas peliculas\n6.Informar genero con mas peliculas\n7.Informar anio con mas peliculas\n8.Informar mes con mas peliculas\n9.Mostrar cantidad de peliculas por actor\n10.Mostrar cantidad de peliculas por genero\n11.Mostrar actores con peliculas\n12.Mostrar generos con peliculas\n15.Salir\n\nElija una opcion:");
         switch(opcion)
         {
         case 1:
@@ -84,8 +84,22 @@ int main()
         case 8:
             buscarMesConMasPeliculas(lista,TAMPELICULAS);
             break;
+
+        case 9:
+            mostrarCantPeliculasPorActor(lista,TAMPELICULAS,actores,TAMACTORES);
+            break;
+
+        case 10:
+            mostrarCantPeliculasPorGenero(lista,TAMPELICULAS,generos,TAMGENEROS);
+            break;
+        case 11:
+            mostrarActoresConPeliculas(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
+            break;
+        case 12:
+            mostrarGenerosConPeliculas(lista,TAMPELICULAS,actores,TAMACTORES,generos,TAMGENEROS);
+            break;
         }
     }
-    while(opcion!=10);
+    while(opcion!=15);
     return 0;
 }

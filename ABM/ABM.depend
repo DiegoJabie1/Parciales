@@ -87,44 +87,44 @@
 	"actores.h"
 	"generos.h"
 
-1557644858 c:\users\diego\desktop\parciales-master\abm\funciones.h
+1557700934 c:\users\diego\desktop\parciales-master\abm\funciones.h
 	<string.h>
 
-1557644858 source:c:\users\diego\desktop\parciales-master\abm\funciones.c
+1557700934 source:c:\users\diego\desktop\parciales-master\abm\funciones.c
 	"funciones.h"
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 
-1557689835 source:c:\users\diego\desktop\parciales-master\abm\main.c
+1557710107 source:c:\users\diego\desktop\parciales-master\abm\main.c
 	<stdlib.h>
 	"peliculas.h"
 	"funciones.h"
 	"string.h"
 
-1557644858 c:\users\diego\desktop\parciales-master\abm\actores.h
+1557700934 c:\users\diego\desktop\parciales-master\abm\actores.h
 	<stdio.h>
 
-1557644858 source:c:\users\diego\desktop\parciales-master\abm\actores.c
+1557700934 source:c:\users\diego\desktop\parciales-master\abm\actores.c
 	"actores.h"
 	"string.h"
 	"funciones.h"
 
-1557692886 c:\users\diego\desktop\parciales-master\abm\generos.h
+1557700934 c:\users\diego\desktop\parciales-master\abm\generos.h
 	<stdio.h>
 
-1557693055 source:c:\users\diego\desktop\parciales-master\abm\generos.c
+1557700934 source:c:\users\diego\desktop\parciales-master\abm\generos.c
 	"funciones.h"
 	"generos.h"
 	"string.h"
 
-1557689186 c:\users\diego\desktop\parciales-master\abm\peliculas.h
+1557709911 c:\users\diego\desktop\parciales-master\abm\peliculas.h
 	<stdio.h>
 	"actores.h"
 	"generos.h"
 
-1557693055 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
+1557709911 source:c:\users\diego\desktop\parciales-master\abm\peliculas.c
 	"string.h"
 	"funciones.h"
 	"peliculas.h"

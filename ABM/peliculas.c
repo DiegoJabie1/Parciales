@@ -7,7 +7,7 @@ int menuDeOpciones(char mensaje[])
     int opcion;
     printf("%s", mensaje);
     scanf("%d", &opcion);
-    while (opcion>10)
+    while (opcion>15)
     {
     system("cls");
     printf("OPCION INVALIDA, INTENTE NUEVAMENTE!!\n%s",mensaje);
@@ -391,6 +391,7 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
             }
         }
     }
+
     for(i=0; i<ta; i++)
     {
         if(flag==0||aux[i].contador>maximo)
@@ -404,10 +405,10 @@ void buscarActorConMasPeliculas(eActores actores[], int ta, ePelicula peliculas[
     {
         if(aux[i].contador==maximo)
         {
-            printf("\n\nCon %d peliculas el actor que mas peliculas tiene es: %s.\n\n\n",aux[i].contador,aux[i].descripcion);
+            printf("\n\nEl actor que mas peliculas tiene es: %s.\n\n",aux[i].descripcion);
         }
     }
-
+    printf("\n");
     system("pause");
     system("cls");
 }
@@ -476,6 +477,7 @@ void buscarAnioConMasPeliculas(ePelicula peliculas[],int tp)
         }
     }
 
+    printf("\n");
     system("pause");
     system("cls");
 }
@@ -576,4 +578,92 @@ void ordenarPeliculasPorFecha(ePelicula peliculas[],int tp)
     }
 }
 
+void mostrarCantPeliculasPorActor(ePelicula peliculas[], int tp, eActores actores[], int ta)
+{
+    int contador;
+    system("cls");
 
+    for(int i=0; i<ta; i++ )
+    {
+        contador = 0;
+        printf("Actor: %s\n", actores[i].nombreActor);
+
+        for(int j=0; j < tp; j++)
+        {
+            if(actores[i].idActor == peliculas[j].idActor && (peliculas[j].estado==OCUPADO) == 1)
+            {
+                contador++;
+            }
+        }
+
+        printf("Cantidad de peliculas: %d\n\n", contador);
+    }
+    system("pause");
+    system("cls");
+}
+
+void mostrarCantPeliculasPorGenero(ePelicula peliculas[], int tp, eGeneros generos[], int tg)
+{
+    int contador;
+    system("cls");
+
+    for(int i=0; i<tg; i++ )
+    {
+        contador = 0;
+        printf("Generos: %s\n", generos[i].descripcion);
+
+        for(int j=0; j < tp; j++)
+        {
+            if(generos[i].idGenero == peliculas[j].idGenero &&(peliculas[j].estado==OCUPADO)== 1)
+            {
+                contador++;
+            }
+        }
+
+        printf("Cantidad de peliculas: %d\n\n", contador);
+    }
+    system("pause");
+    system("cls");
+}
+
+void mostrarActoresConPeliculas(ePelicula peliculas[], int tp, eActores actores[], int ta,eGeneros generos[],int tg)
+{
+
+    system("cls");
+    for(int i=0; i < ta; i++)
+    {
+        printf("Actor: %s\nPeliculas:\n", actores[i].nombreActor);
+        for(int j=0; j < tp; j++)
+        {
+            if( (peliculas[j].idActor == actores[i].idActor) &&(peliculas[j].estado==OCUPADO)== 1)
+            {
+                mostrarPelicula(peliculas[j],generos,tg,actores,ta);
+            }
+        }
+
+        printf("\n\n");
+    }
+    system("pause");
+    system("cls");
+}
+
+void mostrarGenerosConPeliculas(ePelicula peliculas[], int tp, eActores actores[], int ta,eGeneros generos[],int tg)
+{
+
+    system("cls");
+    for(int i=0; i < tg; i++)
+    {
+        printf("Genero: %s\nPeliculas:\n", generos[i].descripcion);
+        for(int j=0; j < tp; j++)
+        {
+            if( (peliculas[j].idGenero == generos[i].idGenero) &&(peliculas[j].estado==OCUPADO)== 1)
+            {
+                mostrarPelicula(peliculas[j],generos,tg,actores,ta);
+            }
+        }
+
+        printf("\n\n");
+    }
+    system("pause");
+    system("cls");
+}
